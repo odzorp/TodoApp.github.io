@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="reset.css" />
+      <link rel="stylesheet" href="style.css" />
+      <link rel="icon" type="img/png" href="images/favicon-32x32.png"/>
+
+      <title>Todo-App</title>
+   </head>
+   <body class="preload-transitions" theme="darkTheme">
+      <div class="main-container">
+         <div class="todo">
+            <header class="header">
+               <section class="logo">
+                  <h2 class="logo-title">TODO</h2>
+                  <button class="btn btn-theme" id="theme-toggle">
+                     <img class="todo-elem-hide" src="images/icon-sun.svg" alt="moon-icon " />
+                     <img  src="images/icon-moon.svg" alt="sun-icon" />
+                  </button>
+               </section>
+               <div class="todo-header">
+                  <div class="todo-circle">
+                  </div>
+                  <label for="todo-input"></label>
+                  <input type="text" class="todo-input" name="todo-input"id="todo-input" placeholder="Create a new todo..." />
+               </div>
+            </header>
+
+            <main class="main">
+               <ul class="todo-list" id="todo-list">
+                  <!-- items added by JavaScript -->
+                  
+               </ul>
+               <div class="todo-filters">
+                  <div class="todo-filters-sides">
+                     <p class="btn"><span id="items-left">5</span> item(s) left</p>
+                     <button class="btn btn-clear" id="clear-completed">Clear Completed</button>
+                  </div>
+                  <div class="todo-filters-center">
+                     
+                        <input type="radio" name="filter" id="all" value="all" class="btn btn-bold" checked>
+                        <label  class="btn btn-bold" for="all">All</label>
+                     
+                        <input type="radio" name="filter" id="active" value="active" class="btn btn-bold">
+                        <label class="btn btn-bold" for="active">Active</label>
+                     
+                        <input type="radio" name="filter" id="completed" value="completed" class="btn btn-bold">
+                        <label class="btn btn-bold" for="completed">Completed</label>
+               </div>
+               </div>
+            </main>
+
+            <div>
+               <button class="drag-and-drop"><strong>Drag and drop to reorder list</strong></button>
+            </div>
+         </div>
+      </div>
+      <script>
+         document.addEventListener("DOMContentLoaded",function(){
+           let node = document.querySelector('.preload-transitions');
+           node.classList.remove('preload-transitions');
+         });
+       </script>
+      <script src="script.js.js"></script>
+   </body>
+</html>
